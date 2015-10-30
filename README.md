@@ -20,6 +20,11 @@ ff.teams(function(teams){
 
 ```
 
+## Usage
+
+TODO: Add all api examples
+You can see code examples in the ``` tests/sanity.js ``` file in the meantime. 
+
 ## API Progress
 
 The full API can be seen [here](http://www.fantasyfootballnerd.com/fantasy-football-api)
@@ -44,4 +49,8 @@ The full API can be seen [here](http://www.fantasyfootballnerd.com/fantasy-footb
 - [ ] Player Stats & Info
 - [ ] Daily Fantasy Football
 
-
+## TODO
+- Finish API porting
+- More unit tests
+- Add code examples
+- Caching
