@@ -8,7 +8,7 @@ function optionsHelper(opt, callback) {
         opt = null;
     }
 
-    req_options = {}
+    var req_options = {}
     if (opt) {
         req_options.options = [ opt ];
     }
