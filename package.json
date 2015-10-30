@@ -1,0 +1,24 @@
+{
+  "name": "fantasy-football-nerd",
+  "version": "1.0.0",
+  "description": "An API wrapper for fantasyfootballnerd.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/adierkens/fantasy-football-nerd.git"
+  },
+  "keywords": [
+    "fantasy",
+    "football",
+    "nfl"
+  ],
+  "author": "Adam Dierkens <adam@dierkens.com> (adamdierkens.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adierkens/fantasy-football-nerd/issues"
+  },
+  "homepage": "https://github.com/adierkens/fantasy-football-nerd#readme"
+}
