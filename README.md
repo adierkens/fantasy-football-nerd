@@ -9,7 +9,7 @@ npm install --save fantasy-football-nerd
 
 ```js
 var FFNerd = require('fantasy-football-nerd');
-var ff = FFNerd({ api_key: <Your API Key> });
+var ff = new FFNerd({ api_key: <Your API Key> });
 
 ff.teams(function(teams){
     console.log('Got teams');

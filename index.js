@@ -21,7 +21,7 @@ function optionsHelper(opt, callback) {
 
 class FFNerd {    
     constructor(options) {
-        default_options = {
+        var default_options = {
             url: 'http://fantasyfootballnerd.com/service/',
             format: 'json',
         }
@@ -43,15 +43,11 @@ class FFNerd {
             }
         }
         request(url, function(error, response, body) {
-            if (response.statusCode != 200) {
-                if (error) {
-                    callback(error, null);
-                } else {
-                    callback(body, null);
-                }
-            } else {
-                callback(null, JSON.parse(body));
+            if (!error && response.statusCode == 200) {
+                callback(JSON.parse(body));
             }
+            console.log("Error: " + error);
+            callback(error);
         });       
     }
     
@@ -99,6 +95,7 @@ class FFNerd {
         req_options.service = 'auction';
 
         this.sendServiceRequest(req_options, callback);
+    }
 }
 
 module.exports = FFNerd;
