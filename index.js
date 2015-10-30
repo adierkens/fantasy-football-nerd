@@ -37,17 +37,13 @@ class FFNerd {
         callback = callback || function(){};
         var url = this.options.url + config.service + '/' + this.options.format + '/' + this.options.api_key;
         if (config.options) {
-            for (opt_i in config.options) {
+            for (var opt_i in config.options) {
                 var opt = config.options[opt_i];
                 url += '/' + opt
             }
         }
         request(url, function(error, response, body) {
-            if (!error && response.statusCode == 200) {
-                callback(JSON.parse(body));
-            }
-            console.log("Error: " + error);
-            callback(error);
+            callback(JSON.parse(body));
         });       
     }
     
