@@ -2,7 +2,7 @@
 > An API wrapper for fantasyfootballnerd.com
 
 
-[![Build Status](https://travis-ci.org/adierkens/fantasy-football-nerd.svg?branch=master)](https://travis-ci.org/adierkens/fantasy-football-nerd)
+[![Build Status](https://travis-ci.org/adierkens/fantasy-football-nerd.svg?branch=master)](https://travis-ci.org/adierkens/fantasy-football-nerd) [![npm version](https://badge.fury.io/js/fantasy-football-nerd.svg)](https://badge.fury.io/js/fantasy-football-nerd)
 
 ## Getting Started
 
