@@ -1,6 +1,9 @@
 # fantasy-football-nerd
 > An API wrapper for fantasyfootballnerd.com
 
+
+[![Build Status](https://travis-ci.org/adierkens/fantasy-football-nerd.svg?branch=master)](https://travis-ci.org/adierkens/fantasy-football-nerd)
+
 ## Getting Started
 
 ```shell
