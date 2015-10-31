@@ -105,4 +105,61 @@ describe('Basic API tests', function() {
             done();
         });
     });
+    
+    it('should return the test nfl weekly projections - QB, week 1', function(done) {
+        ff.weeklyProjections('QB', 1, function(weeklyProjections) {
+            assert.deepEqual(weeklyProjections, require('./resources/weekly_projections_QB_1.json'));
+            done();
+        });
+    });
+    
+    it('should return the test nfl weekly IDP rankings', function(done) {
+        ff.weeklyIDPRankings(function(weeklyIDPRankings) {
+            assert.deepEqual(weeklyIDPRankings, require('./resources/weekly_IDP_rankings.json'));
+            done();
+        });
+    });
+    
+    it('should return the test nfl picks', function(done) {
+        ff.picks(function(picks) {
+            assert.deepEqual(picks, require('./resources/picks.json'));
+            done();
+        });
+    });
+    
+    it('should return the test nfl depth charts', function(done) {
+        ff.depthCharts(function(depthCharts) {
+            assert.deepEqual(depthCharts, require('./resources/depth_charts.json'));
+            done();
+        });
+    });
+    
+    it('should return the test nfl defensive rankings', function(done) {
+        ff.defensiveRankings(function(defensiveRankings) {
+            assert.deepEqual(defensiveRankings, require('./resources/defensive_rankings.json'));
+            done();
+        });
+    });
+    
+    it('should return the test nfl game day inactives', function(done) {
+        ff.inactives(1, function(inactives) {
+            assert.deepEqual(inactives, require('./resources/inactives_1.json'));
+            done();
+        });
+    });
+    
+    it('should return the test player stats and info', function(done) {
+        ff.player(13, function(player) {
+            assert.deepEqual(player, require('./resources/player_13.json'));
+            done();
+        });
+    });
+   
+    it('should return the test daily fantasy football stats', function(done) {
+        ff.dailyFantasyFootball('fanduel', function(dailyFantasyFootball) {
+            assert.deepEqual(dailyFantasyFootball, require('./resources/daily_fanduel.json'));
+            done();
+        });
+    });
+    
 });

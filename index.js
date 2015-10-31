@@ -132,7 +132,7 @@ class FFNerd {
     }
 
     weeklyProjections(position, week, callback) {
-        req_options = { service: 'weekly-projections' };
+        var req_options = { service: 'weekly-projections' };
         req_options.options = [];
         
         if (arguments.length == 1) {
