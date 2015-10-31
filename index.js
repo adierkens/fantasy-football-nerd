@@ -92,6 +92,112 @@ class FFNerd {
 
         this.sendServiceRequest(req_options, callback);
     }
+
+    draftRankings(ppr, callback) {
+        var resolved = optionsHelper(ppr, callback);
+        var req_options = resolved.options;
+        callback = resolved.callback;
+
+        req_options.service = 'draft-rankings';
+    
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    draftProjections(position, callback) {
+        var resolved = optionsHelper(position, callback);
+        var req_options = resolved.options;
+        callback = resolved.callback;
+        
+        req_options.service = 'draft-projections';
+
+        this.sendServiceRequest(req_options, callback);       
+    }
+
+    weeklyRankings(position, week, ppr, callback) {
+        var req_options = { service: 'weekly-rankings', options: [] }
+        if (arguments.length == 1) {
+            callback = position;
+            position = week = ppr = null;
+        } else if (arguments.length == 2) {
+            callback = week;
+            req_options.options = [ position ];
+        } else if (arguments.length == 3) {
+            callback = ppr;
+            req_options.options = [ position, week ]; 
+        } else if (arguments.length == 4) {
+            req_options.options = [ position, week, ppr ];
+        }
+        
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    weeklyProjections(position, week, callback) {
+        req_options = { service: 'weekly-projections' };
+        req_options.options = [];
+        
+        if (arguments.length == 1) {
+            callback = position;
+            position = week = null;
+        } else if (arguments.length == 2) {
+            callback = week;
+            week = null;
+            req_options.options = [ position ];
+        } else {
+            req_options.options = [ position, week ];
+        }
+        
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    weeklyIDPRankings(callback) {
+        var req_options = { service: 'weekly-idp' }
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    picks(callback) {
+        var req_options = { service: 'nfl-picks' }
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    depthCharts(callback) {
+        var req_options = { service: 'depth-charts' }
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    defensiveRankings(callback) {
+        var req_options = { service: 'defense-rankings' }
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    inactives(week, callback) {
+        var resolved = optionsHelper(week, callback);
+        var req_options = resolved.options;
+        callback = resolved.callback;
+        
+        req_options.service = 'inactives';
+
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    player(player_id, callback) {
+        var resolved = optionsHelper(player_id, callback);
+        var req_options = resolved.options;
+        callback = resolved.callback;
+        
+        req_options.service = 'player';
+
+        this.sendServiceRequest(req_options, callback);
+    }
+
+    dailyFantasyFootball(platform, callback) {
+        var resolved = optionsHelper(platform, callback);
+        var req_options = resolved.options;
+        callback = resolved.callback;
+        
+        req_options.service = 'daily';
+
+        this.sendServiceRequest(req_options, callback);
+    }
 }
 
 module.exports = FFNerd;

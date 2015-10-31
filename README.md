@@ -36,21 +36,19 @@ The full API can be seen [here](http://www.fantasyfootballnerd.com/fantasy-footb
 - [x] Injuries
 - [x] Weather Forecasts
 - [x] Auction Values
-- [ ] Draft Rankings
-- [ ] Draft Projections
-- [ ] Weekly Rankings
-- [ ] Weekly Projections
-- [ ] Weekly IDP Rankings
-- [ ] NFL Picks
-- [ ] Depth Charts
-- [ ] Defensive Rankings
-- [ ] Defensive Rankings
-- [ ] Game Day Inactives
-- [ ] Player Stats & Info
-- [ ] Daily Fantasy Football
+- [x] Draft Rankings
+- [x] Draft Projections
+- [x] Weekly Rankings
+- [x] Weekly Projections
+- [x] Weekly IDP Rankings
+- [x] NFL Picks
+- [x] Depth Charts
+- [x] Defensive Rankings
+- [x] Defensive Rankings
+- [x] Game Day Inactives
+- [x] Player Stats & Info
+- [x] Daily Fantasy Football
 
 ## TODO
-- Finish API porting
-- More unit tests
 - Add code examples
 - Caching
